@@ -14,7 +14,7 @@
 4. these two urls should be reachable
 	[`(http://localhost:8080/admin-console-1.0-SNAPSHOT/rest/welcome/index)`]( http://localhost:8080/admin-console-1.0-SNAPSHOT/rest/welcome/index) (for i18n sample)
 	[`(http://localhost:8080/admin-console-1.0-SNAPSHOT/rest/hello/beer`]( http://localhost:8080/admin-console-1.0-SNAPSHOT/rest/hello/beer) (original sample)
-5. TODO:
+#5. TODO:
 
 ### Notes
 * Don't check in any IDE related stuffs, be sure to append them to `.gitignore` 
