@@ -1,0 +1,9 @@
+create table "grade_admin"."tb_tx_org_nodetype"
+( "NODETYPE_ID" VARCHAR2(10) NOT NULL,
+  "NAME" VARCHAR2(50) NOT NULL);
+  
+INSERT INTO tb_tx_org_nodetype (NODETYPE_ID, NAME) VALUES ('10001', 'JT');
+INSERT INTO tb_tx_org_nodetype (NODETYPE_ID, NAME) VALUES ('10002', 'XT');
+INSERT INTO tb_tx_org_nodetype (NODETYPE_ID, NAME) VALUES ('10003', 'YF');
+INSERT INTO tb_tx_org_nodetype (NODETYPE_ID, NAME) VALUES ('10004', 'JG');
+INSERT INTO tb_tx_org_nodetype (NODETYPE_ID, NAME) VALUES ('10005', 'SUB');

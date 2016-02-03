@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-2-1 23:19:38 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="net.iretailer.model.TPackWifiDuration" table="T_Pack_WifiDuration" catalog="insight" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="storeId" type="string">
+            <column name="StoreId" length="50" not-null="true" />
+        </property>
+        <property name="date" type="string">
+            <column name="Date" length="20" />
+        </property>
+        <property name="macDetected" type="java.lang.Integer">
+            <column name="MacDetected">
+                <comment>&#232;&#191;&#155;&#229;&#133;&#165;&#229;&#174;&#162;&#230;&#181;&#129;&#233;&#135;&#143;</comment>
+            </column>
+        </property>
+        <property name="duration" type="java.lang.Integer">
+            <column name="Duration">
+                <comment>&#229;&#135;&#186;&#229;&#142;&#187;&#229;&#174;&#162;&#230;&#181;&#129;&#233;&#135;&#143;</comment>
+            </column>
+        </property>
+        <property name="macEntered" type="java.lang.Integer">
+            <column name="MacEntered" />
+        </property>
+        <property name="macRepeated" type="java.lang.Integer">
+            <column name="MacRepeated" />
+        </property>
+        <property name="updateTime" type="string">
+            <column name="UpdateTime" length="25" />
+        </property>
+        <property name="packTime" type="string">
+            <column name="PackTime" length="25" />
+        </property>
+    </class>
+</hibernate-mapping>

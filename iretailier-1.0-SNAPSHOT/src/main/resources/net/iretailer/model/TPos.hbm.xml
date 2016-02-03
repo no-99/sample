@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-2-1 23:19:38 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="net.iretailer.model.TPos" table="T_Pos" catalog="insight" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="Id" />
+            <generator class="identity" />
+        </id>
+        <property name="storeId" type="string">
+            <column name="StoreId" length="50" not-null="true" />
+        </property>
+        <property name="physicalZoneId" type="int">
+            <column name="PhysicalZoneId" not-null="true" />
+        </property>
+        <property name="posDate" type="string">
+            <column name="PosDate" length="20" />
+        </property>
+        <property name="dateHour" type="java.lang.Integer">
+            <column name="DateHour" />
+        </property>
+        <property name="dateMin" type="java.lang.Integer">
+            <column name="DateMin" />
+        </property>
+        <property name="dateMinPeriod" type="java.lang.Integer">
+            <column name="DateMinPeriod" />
+        </property>
+        <property name="period" type="java.lang.Integer">
+            <column name="Period" />
+        </property>
+        <property name="place" type="string">
+            <column name="Place" length="50" />
+        </property>
+        <property name="sales" type="java.lang.Integer">
+            <column name="Sales" />
+        </property>
+        <property name="tradesNumber" type="java.lang.Integer">
+            <column name="TradesNumber" />
+        </property>
+        <property name="tradeGoodsNumber" type="java.lang.Integer">
+            <column name="TradeGoodsNumber" />
+        </property>
+        <property name="updateTime" type="string">
+            <column name="UpdateTime" length="25" />
+        </property>
+    </class>
+</hibernate-mapping>

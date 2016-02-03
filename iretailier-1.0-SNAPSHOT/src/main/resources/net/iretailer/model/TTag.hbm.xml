@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-2-1 23:19:38 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="net.iretailer.model.TTag" table="T_Tag" catalog="insight" optimistic-lock="version">
+        <id name="id" type="string">
+            <column name="Id" length="50" />
+            <generator class="assigned" />
+        </id>
+        <property name="tableName" type="string">
+            <column name="TableName" length="50" not-null="true" />
+        </property>
+        <property name="keyId" type="string">
+            <column name="KeyId" length="50" />
+        </property>
+        <property name="tagName" type="string">
+            <column name="TagName" length="50" />
+        </property>
+        <property name="tagValue" type="string">
+            <column name="TagValue" length="200" />
+        </property>
+    </class>
+</hibernate-mapping>

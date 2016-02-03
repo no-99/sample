@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-2-1 23:19:38 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="net.iretailer.model.TPack5Wifiduration" table="T_pack5_wifiduration" catalog="insight" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="zoneId" type="int">
+            <column name="ZoneID" not-null="true" />
+        </property>
+        <property name="dateTime" type="timestamp">
+            <column name="DateTime" length="19" />
+        </property>
+        <property name="date" type="string">
+            <column name="Date" length="20" />
+        </property>
+        <property name="dateHour" type="java.lang.Short">
+            <column name="DateHour" />
+        </property>
+        <property name="dateMin5" type="java.lang.Short">
+            <column name="DateMin5" />
+        </property>
+        <property name="macDetected" type="string">
+            <column name="MacDetected" length="17" />
+        </property>
+        <property name="duration" type="java.lang.Short">
+            <column name="Duration" />
+        </property>
+        <property name="rssi" type="string">
+            <column name="Rssi" length="5" />
+        </property>
+        <property name="mpnumber" type="string">
+            <column name="MPnumber" length="15" />
+        </property>
+        <property name="ipaddr" type="string">
+            <column name="Ipaddr" length="15" />
+        </property>
+    </class>
+</hibernate-mapping>

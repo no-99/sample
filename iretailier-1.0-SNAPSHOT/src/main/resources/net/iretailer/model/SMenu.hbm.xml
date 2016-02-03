@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-2-1 23:19:38 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="net.iretailer.model.SMenu" table="S_Menu" catalog="insight" optimistic-lock="version">
+        <id name="id" type="string">
+            <column name="Id" length="50" />
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="string">
+            <column name="Name" length="50">
+                <comment>&#232;&#143;&#156;&#229;&#141;&#149;&#229;&#144;&#141;&#231;&#167;&#176;</comment>
+            </column>
+        </property>
+        <property name="parentId" type="string">
+            <column name="ParentId" length="50" not-null="true">
+                <comment>&#228;&#184;&#138;&#231;&#186;&#167;&#232;&#143;&#156;&#229;&#141;&#149;</comment>
+            </column>
+        </property>
+        <property name="imageUrl" type="string">
+            <column name="ImageUrl" length="100">
+                <comment>&#229;&#155;&#190;&#230;&#160;&#135;</comment>
+            </column>
+        </property>
+        <property name="pageUrl" type="string">
+            <column name="PageUrl" length="200">
+                <comment>&#233;&#161;&#181;&#233;&#157;&#162;&#229;&#156;&#176;&#229;&#157;&#128;</comment>
+            </column>
+        </property>
+        <property name="visible" type="short">
+            <column name="Visible" not-null="true">
+                <comment>&#230;&#152;&#175;&#229;&#144;&#166;&#229;&#143;&#175;&#232;&#167;&#129;</comment>
+            </column>
+        </property>
+        <property name="rank" type="int">
+            <column name="Rank" not-null="true">
+                <comment>&#230;&#172;&#161;&#229;&#186;&#143;</comment>
+            </column>
+        </property>
+        <property name="description" type="string">
+            <column name="Description" length="400">
+                <comment>&#230;&#143;&#143;&#232;&#191;&#176;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-2-1 23:19:38 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="net.iretailer.model.TAutoRun" table="T_AutoRun" catalog="insight" optimistic-lock="version">
+        <id name="id" type="string">
+            <column name="Id" length="50" />
+            <generator class="assigned" />
+        </id>
+        <property name="configName" type="string">
+            <column name="ConfigName" length="30" not-null="true" />
+        </property>
+        <property name="service" type="string">
+            <column name="Service" length="50" not-null="true" />
+        </property>
+        <property name="runAtStart" type="java.lang.Integer">
+            <column name="RunAtStart" />
+        </property>
+        <property name="runTime" type="string">
+            <column name="RunTime" length="30" />
+        </property>
+        <property name="tickPeriod" type="string">
+            <column name="TickPeriod" length="50" />
+        </property>
+        <property name="tickTime" type="java.lang.Integer">
+            <column name="TickTime" />
+        </property>
+        <property name="weekdays" type="string">
+            <column name="Weekdays" length="40" />
+        </property>
+        <property name="description" type="string">
+            <column name="Description" length="400" />
+        </property>
+        <property name="enabled" type="java.lang.Integer">
+            <column name="Enabled" />
+        </property>
+    </class>
+</hibernate-mapping>

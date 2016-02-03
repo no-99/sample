@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-12-11 12:05:29 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping package="com.openscoring.mgr.entity">
+    <class name="PmmlFeature" table="ifx_pmml_feature" catalog="credit">
+        <id name="uuid" type="string">
+            <column name="UUID" length="32" />
+            <generator class="increment" />
+        </id>
+        <property name="pmmlHisUuid" type="string">
+            <column name="PMML_HIS_UUID" length="32" />
+        </property>
+        <property name="featureName" type="string">
+            <column name="FEATURE_NAME" length="80" />
+        </property>
+        <property name="featureCode" type="string">
+            <column name="FEATURE_CODE" length="32" />
+        </property>
+        <property name="featureDesc" type="string">
+            <column name="FEATURE_DESC" length="2000" />
+        </property>
+        <property name="lastModifiedTime" type="date">
+            <column name="LAST_MODIFIED_TIME" length="10" />
+        </property>
+        <property name="lastModifiedBy" type="string">
+            <column name="LAST_MODIFIED_BY" length="35" />
+        </property>
+    </class>
+</hibernate-mapping>

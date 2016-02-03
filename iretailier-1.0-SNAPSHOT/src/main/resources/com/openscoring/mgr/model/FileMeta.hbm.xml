@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-12-11 12:05:29 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping package="com.openscoring.mgr.model">
+    <class name="FileMeta" table="ifx_file_meta" catalog="credit">
+
+    	<cache usage="read-write"/>
+
+        <id name="uuid" type="string">
+            <column name="UUID" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="pmmlUuid" type="string">
+            <column name="PMMLUUID" length="32" />
+        </property>
+        <property name="fileName" type="string">
+            <column name="FILENAME" length="32" />
+        </property>
+        <property name="fileSize" type="string">
+            <column name="FILESIZE" length="32"/>
+        </property>
+        <property name="fileType" type="string">
+            <column name="FILETYPE" length="80" />
+        </property>
+        <property name="modelName" type="string">
+            <column name="MODELNAME" length="80" />
+        </property>
+        <property name="effectDate" type="date">
+            <column name="EFFECT_DATE" length="10" />
+        </property>
+        <property name="modelDesc" type="string">
+            <column name="MODEL_DESC" length="2000" />
+        </property>
+        <property name="status" type="string">
+            <column name="STATUS" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

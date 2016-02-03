@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-2-1 23:19:38 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="net.iretailer.model.SUser" table="S_User" catalog="insight" optimistic-lock="version">
+        <id name="id" type="string">
+            <column name="Id" length="50" />
+            <generator class="assigned" />
+        </id>
+        <property name="accountNo" type="int">
+            <column name="AccountNo" not-null="true">
+                <comment>&#231;&#148;&#168;&#230;&#136;&#183;&#231;&#188;&#150;&#229;&#143;&#183;</comment>
+            </column>
+        </property>
+        <property name="userCode" type="string">
+            <column name="UserCode" length="50" not-null="true">
+                <comment>&#231;&#148;&#168;&#230;&#136;&#183;&#229;&#144;&#141;</comment>
+            </column>
+        </property>
+        <property name="userPwd" type="string">
+            <column name="UserPwd" length="50" not-null="true">
+                <comment>&#231;&#148;&#168;&#230;&#136;&#183;&#229;&#175;&#134;&#231;&#160;&#129;</comment>
+            </column>
+        </property>
+        <property name="name" type="string">
+            <column name="Name" length="50" not-null="true">
+                <comment>&#229;&#167;&#147;&#229;&#144;&#141;</comment>
+            </column>
+        </property>
+        <property name="roleId" type="string">
+            <column name="RoleId" length="50" not-null="true">
+                <comment>&#231;&#148;&#168;&#230;&#136;&#183;&#232;&#167;&#146;&#232;&#137;&#178;</comment>
+            </column>
+        </property>
+        <property name="email" type="string">
+            <column name="Email" length="200">
+                <comment>&#233;&#130;&#174;&#228;&#187;&#182;&#229;&#156;&#176;&#229;&#157;&#128;</comment>
+            </column>
+        </property>
+        <property name="mobile" type="string">
+            <column name="Mobile" length="50">
+                <comment>&#230;&#137;&#139;&#230;&#156;&#186;</comment>
+            </column>
+        </property>
+        <property name="telephone" type="string">
+            <column name="Telephone" length="50">
+                <comment>&#231;&#148;&#181;&#232;&#175;&#157;</comment>
+            </column>
+        </property>
+        <property name="tryTimes" type="java.lang.Short">
+            <column name="TryTimes">
+                <comment>&#229;&#176;&#157;&#232;&#175;&#149;&#231;&#153;&#187;&#229;&#189;&#149;&#230;&#172;&#161;&#230;&#149;&#176;</comment>
+            </column>
+        </property>
+        <property name="isLock" type="java.lang.Short">
+            <column name="IsLock">
+                <comment>&#230;&#152;&#175;&#229;&#144;&#166;&#233;&#148;&#129;&#229;&#174;&#154;</comment>
+            </column>
+        </property>
+        <property name="lockTime" type="string">
+            <column name="LockTime" length="20">
+                <comment>&#233;&#148;&#129;&#229;&#174;&#154;&#230;&#151;&#182;&#233;&#151;&#180;</comment>
+            </column>
+        </property>
+        <property name="createUser" type="string">
+            <column name="CreateUser" length="50" />
+        </property>
+        <property name="createTime" type="string">
+            <column name="CreateTime" length="20" not-null="true" />
+        </property>
+        <property name="updateUser" type="string">
+            <column name="UpdateUser" length="50" />
+        </property>
+        <property name="updateTime" type="string">
+            <column name="UpdateTime" length="20" not-null="true" />
+        </property>
+        <property name="deleteFlag" type="int">
+            <column name="DeleteFlag" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

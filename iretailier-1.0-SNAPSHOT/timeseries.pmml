@@ -1,0 +1,79 @@
+<PMML xmlns="http://www.dmg.org/PMML-4_1" version="4.1">
+  <Header copyright="DMG.org">
+    <Application name="test application"/>
+  </Header>
+  <DataDictionary numberOfFields="2">
+    <DataField dataType="double" name="Month_Index" optype="continuous">
+      <Interval closure="closedClosed" leftMargin="1" rightMargin="50"/>
+    </DataField>
+    <DataField dataType="double" name="QuadraticMonth" optype="continuous"/>
+  </DataDictionary>
+  <TimeSeriesModel bestFit="ExponentialSmoothing" functionName="timeSeries" modelName="QuadraticMonth Predictor">
+    <MiningSchema>
+      <MiningField invalidValueTreatment="asIs" name="Month_Index" outliers="asIs" usageType="order"/>
+      <MiningField name="QuadraticMonth" outliers="asIs" usageType="predicted"/>
+    </MiningSchema>
+    <Output>
+      <OutputField dataType="double" feature="predictedValue" name="QuadraticMonth Predictor - Predicted Value" optype="continuous"/>
+    </Output>
+    <TimeSeries>
+      <TimeValue index="50" value="2550"/>
+    </TimeSeries>
+    <ExponentialSmoothing RMSE="1.469296539064514">
+      <Level alpha="0.29"/>
+      <Trend_ExpoSmooth trend="polynomial_exponential">
+        <Array type="real" n="3">2549.999972 100.9999732 1.999994714</Array>
+      </Trend_ExpoSmooth>
+      <TimeValue index="1" value="1.499999999999986"/>
+      <TimeValue index="2" value="4.434999999999974"/>
+      <TimeValue index="3" value="9.422699999999999"/>
+      <TimeValue index="4" value="16.69814500000001"/>
+      <TimeValue index="5" value="26.30456892500002"/>
+      <TimeValue index="6" value="38.19968310645001"/>
+      <TimeValue index="7" value="52.31215520655601"/>
+      <TimeValue index="8" value="68.56947439659567"/>
+      <TimeValue index="9" value="86.90993292618671"/>
+      <TimeValue index="10" value="107.2862207849398"/>
+      <TimeValue index="11" value="129.6649358584095"/>
+      <TimeValue index="12" value="154.0243926888923"/>
+      <TimeValue index="13" value="180.3519824960263"/>
+      <TimeValue index="14" value="208.6416885111437"/>
+      <TimeValue index="15" value="238.8920018116692"/>
+      <TimeValue index="16" value="271.1042947305884"/>
+      <TimeValue index="17" value="305.281618813078"/>
+      <TimeValue index="18" value="341.4278584112037"/>
+      <TimeValue index="19" value="379.5471635161653"/>
+      <TimeValue index="20" value="419.6435914851766"/>
+      <TimeValue index="21" value="461.7208987097413"/>
+      <TimeValue index="22" value="505.7824356899514"/>
+      <TimeValue index="23" value="551.8311103729045"/>
+      <TimeValue index="24" value="599.8693941784766"/>
+      <TimeValue index="25" value="649.8993527234378"/>
+      <TimeValue index="26" value="701.9226890294883"/>
+      <TimeValue index="27" value="755.9407912489685"/>
+      <TimeValue index="28" value="811.9547799736052"/>
+      <TimeValue index="29" value="869.965552291198"/>
+      <TimeValue index="30" value="929.9738211628786"/>
+      <TimeValue index="31" value="991.980149602085"/>
+      <TimeValue index="32" value="1055.984979693915"/>
+      <TimeValue index="33" value="1121.988656811033"/>
+      <TimeValue index="34" value="1189.991449540624"/>
+      <TimeValue index="35" value="1259.993565893434"/>
+      <TimeValue index="36" value="1331.99516636062"/>
+      <TimeValue index="37" value="1405.996374344018"/>
+      <TimeValue index="38" value="1481.997284428074"/>
+      <TimeValue index="39" value="1559.997968898639"/>
+      <TimeValue index="40" value="1639.998482851363"/>
+      <TimeValue index="41" value="1721.998868174932"/>
+      <TimeValue index="42" value="1805.999156642965"/>
+      <TimeValue index="43" value="1891.999372304384"/>
+      <TimeValue index="44" value="1979.999533324537"/>
+      <TimeValue index="45" value="2069.999653398587"/>
+      <TimeValue index="46" value="2161.999742833126"/>
+      <TimeValue index="47" value="2255.999809371593"/>
+      <TimeValue index="48" value="2351.9998588225"/>
+      <TimeValue index="49" value="2449.999895536411"/>
+      <TimeValue index="50" value="2549.999922767288"/>
+    </ExponentialSmoothing>
+  </TimeSeriesModel>
+</PMML>

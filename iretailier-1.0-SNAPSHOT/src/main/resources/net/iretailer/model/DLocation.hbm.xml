@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-2-1 23:19:38 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="net.iretailer.model.DLocation" table="D_Location" catalog="insight" optimistic-lock="version">
+        <id name="id" type="string">
+            <column name="Id" length="50" />
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="string">
+            <column name="Name" length="200">
+                <comment>&#229;&#156;&#176;&#231;&#144;&#134;&#228;&#189;&#141;&#231;&#189;&#174;&#229;&#144;&#141;&#231;&#167;&#176;</comment>
+            </column>
+        </property>
+        <property name="level" type="java.lang.Integer">
+            <column name="Level">
+                <comment>&#229;&#156;&#176;&#231;&#144;&#134;&#228;&#189;&#141;&#231;&#189;&#174;&#229;&#177;&#130;&#230;&#172;&#161;</comment>
+            </column>
+        </property>
+        <property name="parentId" type="string">
+            <column name="ParentId" length="50" not-null="true">
+                <comment>&#228;&#184;&#138;&#231;&#186;&#167;&#228;&#189;&#141;&#231;&#189;&#174;</comment>
+            </column>
+        </property>
+        <property name="imageUrl" type="string">
+            <column name="ImageUrl" length="300">
+                <comment>&#229;&#155;&#190;&#230;&#160;&#135;</comment>
+            </column>
+        </property>
+        <property name="getWeather" type="java.lang.Integer">
+            <column name="GetWeather" />
+        </property>
+        <property name="cityCode1" type="string">
+            <column name="CityCode1" length="20" />
+        </property>
+        <property name="cityCode2" type="string">
+            <column name="CityCode2" length="20" />
+        </property>
+        <property name="rank" type="int">
+            <column name="Rank" not-null="true">
+                <comment>&#230;&#172;&#161;&#229;&#186;&#143;</comment>
+            </column>
+        </property>
+        <property name="visible" type="java.lang.Integer">
+            <column name="Visible" />
+        </property>
+        <property name="updateUser" type="string">
+            <column name="UpdateUser" length="50" />
+        </property>
+        <property name="updateTime" type="string">
+            <column name="UpdateTime" length="20" />
+        </property>
+        <property name="deleteFlag" type="int">
+            <column name="DeleteFlag" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

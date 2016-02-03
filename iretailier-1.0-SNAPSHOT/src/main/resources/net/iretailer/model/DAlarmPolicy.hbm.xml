@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-2-1 23:19:38 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="net.iretailer.model.DAlarmPolicy" table="D_AlarmPolicy" catalog="insight" optimistic-lock="version">
+        <id name="id" type="string">
+            <column name="Id" length="50" />
+            <generator class="assigned" />
+        </id>
+        <property name="alarmCode" type="string">
+            <column name="AlarmCode" length="10" not-null="true" />
+        </property>
+        <property name="method" type="string">
+            <column name="Method" length="20" not-null="true" />
+        </property>
+        <property name="minCount" type="java.lang.Integer">
+            <column name="MinCount" />
+        </property>
+        <property name="repeatCount" type="java.lang.Integer">
+            <column name="RepeatCount" />
+        </property>
+        <property name="alarmLevel" type="string">
+            <column name="AlarmLevel" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>

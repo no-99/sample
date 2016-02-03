@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-12-11 12:05:29 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping package="com.openscoring.mgr.entity">
+    <class name="PmmlExecLog" table="ifx_pmml_exec_log" catalog="credit">
+        <id name="uuid" type="string">
+            <column name="UUID" length="32" />
+            <generator class="increment" />
+        </id>
+        <property name="pmmlHisId" type="string">
+            <column name="PMML_HIS_ID" length="32" />
+        </property>
+        <property name="execStartTime" type="date">
+            <column name="EXEC_START_TIME" length="10" />
+        </property>
+        <property name="featureValue" type="string">
+            <column name="FEATURE_VALUE" />
+        </property>
+        <property name="execDuration" type="string">
+            <column name="EXEC_DURATION" length="16777215" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,16 @@
+#exec:hover, .exec:hover, .view:hover, .publish:hover {
+	cursor:pointer;
+}
+.publish, .view, .exec {
+	display:none;
+}
+#exec {
+	border: 1px solid;
+	margin: 20px 20px;
+	padding: 0 20px;
+}
+
+#request {
+	width: 600px;
+	height: 200px;
+}

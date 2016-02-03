@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-2-1 23:19:38 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="net.iretailer.model.Zone" table="zone" catalog="insight" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="physicalZoneId" type="java.lang.Integer">
+            <column name="PhysicalZoneID" />
+        </property>
+        <property name="name" type="string">
+            <column name="Name" length="48" />
+        </property>
+        <property name="deviceId" type="java.lang.Integer">
+            <column name="DeviceID" />
+        </property>
+        <property name="deviceZoneId" type="short">
+            <column name="DeviceZoneID" not-null="true" />
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="CreateDate" length="19" />
+        </property>
+        <property name="enable" type="java.lang.Short">
+            <column name="Enable">
+                <comment>1 for enable</comment>
+            </column>
+        </property>
+        <property name="zoneClass" type="string">
+            <column name="ZoneClass" length="20" />
+        </property>
+    </class>
+</hibernate-mapping>

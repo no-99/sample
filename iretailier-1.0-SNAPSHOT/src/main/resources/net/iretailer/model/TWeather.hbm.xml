@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-2-1 23:19:38 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="net.iretailer.model.TWeather" table="T_Weather" catalog="insight" optimistic-lock="version">
+        <composite-id name="id" class="net.iretailer.model.TWeatherId">
+            <key-property name="id" type="string">
+                <column name="Id" length="50" />
+            </key-property>
+            <key-property name="cityId" type="string">
+                <column name="CityId" length="50" />
+            </key-property>
+            <key-property name="weatherDate" type="string">
+                <column name="WeatherDate" length="25" />
+            </key-property>
+            <key-property name="weatherName" type="string">
+                <column name="WeatherName" length="20" />
+            </key-property>
+            <key-property name="imageUrl" type="string">
+                <column name="ImageUrl" length="50" />
+            </key-property>
+            <key-property name="lowTemp" type="java.lang.Integer">
+                <column name="LowTemp" />
+            </key-property>
+            <key-property name="highTemp" type="java.lang.Integer">
+                <column name="HighTemp" />
+            </key-property>
+            <key-property name="humidity" type="java.lang.Integer">
+                <column name="Humidity" />
+            </key-property>
+            <key-property name="pm25" type="java.lang.Integer">
+                <column name="PM25" />
+            </key-property>
+            <key-property name="pollutionLevel" type="java.lang.Integer">
+                <column name="PollutionLevel" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-12-11 12:05:29 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping package="com.openscoring.mgr.entity">
+    <class name="PmmlExecStat" table="ifx_pmml_exec_stat" catalog="credit">
+        <id name="uuid" type="string">
+            <column name="UUID" length="32" />
+            <generator class="increment" />
+        </id>
+        <property name="pmmlHisUuid" type="string">
+            <column name="PMML_HIS_UUID" length="32" />
+        </property>
+        <property name="createTime" type="date">
+            <column name="CREATE_TIME" length="10" />
+        </property>
+        <property name="statDesc" type="string">
+            <column name="STAT_DESC" length="2000" />
+        </property>
+        <property name="stat" type="string">
+            <column name="STAT" />
+        </property>
+    </class>
+</hibernate-mapping>

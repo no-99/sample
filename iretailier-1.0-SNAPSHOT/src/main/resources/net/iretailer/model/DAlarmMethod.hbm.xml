@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-2-1 23:19:38 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="net.iretailer.model.DAlarmMethod" table="D_AlarmMethod" catalog="insight" optimistic-lock="version">
+        <id name="id" type="string">
+            <column name="Id" length="50" />
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="string">
+            <column name="Name" length="20" not-null="true" />
+        </property>
+        <property name="method" type="string">
+            <column name="Method" length="20" not-null="true" />
+        </property>
+        <property name="server" type="string">
+            <column name="Server" length="20" />
+        </property>
+        <property name="port" type="string">
+            <column name="Port" length="10" />
+        </property>
+        <property name="userName" type="string">
+            <column name="UserName" length="50" />
+        </property>
+        <property name="userPass" type="string">
+            <column name="UserPass" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

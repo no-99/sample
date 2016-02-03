@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-2-1 23:19:38 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="net.iretailer.model.TActivity" table="T_Activity" catalog="insight" optimistic-lock="version">
+        <id name="id" type="string">
+            <column name="Id" length="50" />
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="string">
+            <column name="Name" length="50" not-null="true" />
+        </property>
+        <property name="startTime" type="string">
+            <column name="StartTime" length="25" not-null="true" />
+        </property>
+        <property name="endTime" type="string">
+            <column name="EndTime" length="25" not-null="true" />
+        </property>
+        <property name="description" type="string">
+            <column name="Description" length="400" />
+        </property>
+    </class>
+</hibernate-mapping>

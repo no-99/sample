@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-2-1 23:19:38 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="net.iretailer.model.Physicalzone" table="Physicalzone" catalog="insight" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="Id" />
+            <generator class="identity" />
+        </id>
+        <property name="storeId" type="string">
+            <column name="StoreId" length="50" not-null="true" />
+        </property>
+        <property name="siteId" type="java.lang.Integer">
+            <column name="SiteID" />
+        </property>
+        <property name="name" type="string">
+            <column name="Name" length="96" />
+        </property>
+        <property name="zoneTypeId" type="string">
+            <column name="ZoneTypeId" length="50" />
+        </property>
+        <property name="enable" type="java.lang.Short">
+            <column name="Enable">
+                <comment>1 for enable</comment>
+            </column>
+        </property>
+        <property name="floor" type="string">
+            <column name="Floor" length="50" />
+        </property>
+        <property name="reverseBak" type="java.lang.Short">
+            <column name="ReverseBak" />
+        </property>
+        <property name="overload" type="java.lang.Short">
+            <column name="Overload" />
+        </property>
+    </class>
+</hibernate-mapping>

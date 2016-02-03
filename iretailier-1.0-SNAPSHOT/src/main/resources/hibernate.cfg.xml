@@ -1,0 +1,62 @@
+<!--
+  ~ Hibernate, Relational Persistence for Idiomatic Java
+  ~
+  ~ License: GNU Lesser General Public License (LGPL), version 2.1 or later.
+  ~ See the lgpl.txt file in the root directory or <http://www.gnu.org/licenses/lgpl-2.1.html>.
+  -->
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- 运行时是否打印 SQL -->
+		<property name="show_sql">true</property>
+		
+		<!-- 运行时是否格式化 SQL -->
+		<property name="format_sql">true</property>
+		
+		<!-- 启用二级缓存 -->
+		<property name="cache.use_second_level_cache">true</property>
+		
+		<!-- 配置启用查询缓存 -->
+		<property name="cache.use_query_cache">true</property>
+		
+		<property name="hibernate.cache.provider_configuration_file_resource_path">/ehcache.xml</property>
+		<property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>
+		
+		<!-- 配置管理 Session 的方式 -->
+		<property name="hibernate.current_session_context_class">thread</property>
+
+		<!-- 设定对数据库进行批量删除，批量更新和批量插入的时候的批次大小 -->
+        <property name="jdbc.batch_size">30</property>
+		
+		<!-- 设定 JDBC 的 Statement 读取数据的时候每次从数据库中取出的记录条数 -->
+		<property name="hibernate.jdbc.fetch_size">100</property>
+		
+		<!-- 设置 Hibernate 的事务隔离级别 -->
+        <!-- <property name="connection.isolation">2</property> -->
+        
+        <property name="hibernate.c3p0.max_size">20</property>
+        <property name="hibernate.c3p0.min_size">5</property>
+        <property name="hibernate.c3p0.timeout">120</property>
+        <property name="hibernate.c3p0.max_statements">100</property>
+        <property name="hibernate.c3p0.idle_test_period">120</property>
+        <property name="hibernate.c3p0.acquire_increment">2</property>
+        <property name="hibernate.c3p0.validate">true</property>
+		
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/credit</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password"></property>
+		<property name="hibernate.jdbc.batch_size">20</property>
+		
+		<mapping class="com.openscoring.mgr.entity.Pmml" resource="com/openscoring/mgr/entity/Pmml.hbm.xml"/>
+		<mapping resource="com/openscoring/mgr/entity/PmmlExecLog.hbm.xml"/>
+		<mapping resource="com/openscoring/mgr/entity/PmmlExecStat.hbm.xml"/>
+		<mapping resource="com/openscoring/mgr/entity/PmmlFeature.hbm.xml"/>
+		<mapping resource="com/openscoring/mgr/entity/PmmlHis.hbm.xml"/>
+		<mapping resource="com/openscoring/mgr/model/FileMeta.hbm.xml"/>
+		
+		<class-cache usage="read-write" class="com.openscoring.mgr.entity.Pmml"/>
+		<class-cache usage="read-write" class="com.openscoring.mgr.model.FileMeta"/>
+	</session-factory>
+</hibernate-configuration>
