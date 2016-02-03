@@ -1,0 +1,8 @@
+.idea/
+target/
+*.iml
+*.swp
+.metadata/
+RemoteSystemsTempFiles/
+.class
+.project
